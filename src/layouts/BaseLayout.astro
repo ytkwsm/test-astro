@@ -30,9 +30,9 @@ const { pageRole }   = Astro.props;
 	<body data-page-type={pageType} data-page-role={pageRole}>
     <div id="SiteWrapper">
       <Header />
-      <div class="pageContents">
+      <section class="pageContents">
         <slot />
-      </div>
+      </section>
       <Footer />
     </div>
 	</body>

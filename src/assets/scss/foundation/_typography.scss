@@ -2,8 +2,10 @@
 
 
 
-h1, h2, h3, h4, h5 h6 {
-  @include text.fontFeatureSettings();
+html {
+  font-family: san-serif;
+  font-family: 'Inter', 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 500;
 }
 
 :lang(en) {
@@ -11,7 +13,8 @@ h1, h2, h3, h4, h5 h6 {
   @include text.hyphens();
 }
 
-html {
-  font-family: san-serif;
-  font-weight: 400;
+h1, h2, h3, h4, h5 h6 {
+  font-family: 'Inter', 'IBM Plex Sans JP', sans-serif;
+  @include text.fontFeatureSettings();
 }
+
