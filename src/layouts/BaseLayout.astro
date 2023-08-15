@@ -1,19 +1,21 @@
 ---
+import "../assets/scss/style.scss";
 import HtmlHead from '../modules/global/HtmlHead.astro';
-import Header from '../modules/global/Header.astro';
-import Footer from '../modules/global/Footer.astro';
+import Header from '../modules/global/SiteHeader.astro';
+import Footer from '../modules/global/SiteFooter.astro';
 
 interface Props {
 	pageTitle: string;
 	pageDesc: string;
   pageType: string;
+  pageRole: string;
 }
 
 const { pageTitle }  = Astro.props;
 const { pageDesc }   = Astro.props;
 const { pageType }   = Astro.props;
+const { pageRole }   = Astro.props;
 
-// console.log(Astro.props)
 ---
 
 <!DOCTYPE html>
@@ -23,29 +25,17 @@ const { pageType }   = Astro.props;
       pageTitle={pageTitle}
       pageDesc={pageDesc}
     />
+    <script src="../../src/assets/ts/main.ts" defer></script>
 	</head>
-	<body data-page-type={pageType}>
-    <div id="wrapper">
+	<body data-page-type={pageType} data-page-role={pageRole}>
+    <div id="SiteWrapper">
       <Header />
-      <slot />
+      <div class="pageContents">
+        <slot />
+      </div>
       <Footer />
     </div>
 	</body>
 </html>
 <style is:global>
-	/* :root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	} */
 </style>

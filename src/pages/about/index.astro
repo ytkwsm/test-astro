@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StaticHeader from '../../modules/static/StaticHeader.astro';
+
+const pageTitle  = "About"
+const pageDesc   = "This is page of About."
+const pageType   = "static"
+const pageRole   = "dirRoot"
+---
+<BaseLayout
+  pageTitle={pageTitle}
+  pageDesc={pageDesc}
+  pageType={pageType}
+  pageRole={pageRole}
+>
+  <StaticHeader
+    pageTitle={pageTitle}
+    pageDesc={pageDesc}
+  />
+  <main>
+    <p>ここがメインコンテンツ。</p>
+  </main>
+</BaseLayout>
+
+<style>
+</style>

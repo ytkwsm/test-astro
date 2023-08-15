@@ -3,5 +3,10 @@
      "name": "Test Astro(config)"
     ,"desc": "test site desc."
     ,"color": "#22b5bb"
+    ,"startYear": "2023"
   }
+  ,"author": {
+    "name": "ytkwsm"
+  }
+
 }

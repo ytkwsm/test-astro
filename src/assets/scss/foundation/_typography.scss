@@ -1,0 +1,17 @@
+@use "../mixin/text.scss" as text;
+
+
+
+h1, h2, h3, h4, h5 h6 {
+  @include text.fontFeatureSettings();
+}
+
+:lang(en) {
+  @include text.fontKerning();
+  @include text.hyphens();
+}
+
+html {
+  font-family: san-serif;
+  font-weight: 400;
+}

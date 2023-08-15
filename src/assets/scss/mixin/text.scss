@@ -1,0 +1,13 @@
+
+@mixin fontFeatureSettings() {
+  font-feature-settings: "palt" 1;
+  font-kerning: normal;
+}
+
+@mixin fontKerning() {
+  font-kerning: normal;
+}
+
+@mixin hyphens() {
+  hyphens: auto;
+}

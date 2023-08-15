@@ -1,15 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+
+const pageTitle  = ""
+const pageDesc   = "page desc ohhhhhhhh"
+const pageType   = "template"
+const pageRole   = "siteRoot"
 ---
 
 <BaseLayout
-  pageTitle=""
-  pageDesc="page desc ohhhhhhhh"
-  pageType="SiteTop"
+  pageTitle={pageTitle}
+  pageDesc={pageDesc}
+  pageType={pageType}
+  pageRole={pageRole}
 >
 	<main>
     <p>ここがメインコンテンツ。</p>
+    <pre>
+      const pageTitle  = "" /* ページタイトル＋文字列なければjsonのサイト名のみ表示 */
+      const pageDesc   = "page desc ohhhhhhhh" /* ページ概要＋文字列なければjsonのdescのみ表示 */
+      const pageType   = "template" /* css, js用 */
+      const pageRole   = "siteRoot" /* css, js用 */
+    </pre>
+    <p><a href="/about/">About</a></p>
 		<!-- <svg
 			class="astro-a"
 			width="495"
@@ -66,7 +79,7 @@ import Card from '../components/Card.astro';
 			/>
 		</ul> -->
 	</main>
-</Layout>
+</BaseLayout>
 
 <style>
 	/* main {

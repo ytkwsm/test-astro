@@ -1,10 +1,6 @@
 ---
 import config from '../../settings/config.json';
 
-// interface Props {
-// 	Config: any;
-// }
-
 const { pageTitle }   = Astro.props;
 const { pageDesc }    = Astro.props;
 const title   = pageTitle ? pageTitle + " | " + config.site.name : config.site.name
