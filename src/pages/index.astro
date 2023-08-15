@@ -1,11 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<BaseLayout
+  pageTitle=""
+  pageDesc="page desc ohhhhhhhh"
+  pageType="SiteTop"
+>
 	<main>
-		<svg
+    <p>ここがメインコンテンツ。</p>
+		<!-- <svg
 			class="astro-a"
 			width="495"
 			height="623"
@@ -59,12 +64,12 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
+		</ul> -->
 	</main>
 </Layout>
 
 <style>
-	main {
+	/* main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -119,5 +124,5 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
-	}
+	} */
 </style>

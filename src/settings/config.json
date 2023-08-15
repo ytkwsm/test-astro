@@ -1,0 +1,7 @@
+{
+  "site": {
+     "name": "Test Astro(config)"
+    ,"desc": "test site desc."
+    ,"color": "#22b5bb"
+  }
+}

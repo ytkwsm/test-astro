@@ -1,0 +1,20 @@
+---
+import config from '../../settings/config.json';
+
+// interface Props {
+// 	Config: any;
+// }
+
+const { pageTitle }   = Astro.props;
+const { pageDesc }    = Astro.props;
+const title   = pageTitle ? pageTitle + " | " + config.site.name : config.site.name
+const desc    = pageDesc ? pageDesc : config.site.desc
+const color   = config.site.color;
+---
+<meta charset="UTF-8" />
+<meta name="description" content={desc}>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content={color}>
+<title>{title}</title>
