@@ -1,5 +1,7 @@
 ---
 import config from '../../settings/config.json';
+import SiteNav from './SiteNav.astro';
+import SiteColorSwitcher from './SiteColorSwitcher.astro';
 
 const title = config.site.name;
 ---
@@ -7,4 +9,6 @@ const title = config.site.name;
   <hgroup>
     <h1><a href="/">{title}</a></h1>
   </hgroup>
+  <SiteNav />
+  <SiteColorSwitcher />
 </header>

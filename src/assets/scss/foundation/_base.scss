@@ -39,6 +39,8 @@ hr {
 }
 
 html {
+  color: var(--colorTxt);
+  background: var(--colorBg);
   block-size: 100%;
   -webkit-text-size-adjust: none;
 }
