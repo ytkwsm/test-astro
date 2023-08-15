@@ -1,11 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
+
+const pageTitle  = ""
+const pageDesc   = "page desc ohhhhhhhh"
+const pageType   = "template"
+const pageRole   = "siteRoot"
 ---
 
-<Layout title="Welcome to Astro.">
+<BaseLayout
+  pageTitle={pageTitle}
+  pageDesc={pageDesc}
+  pageType={pageType}
+  pageRole={pageRole}
+>
 	<main>
-		<svg
+    <p>ここがメインコンテンツ。</p>
+    <pre>
+      const pageTitle  = "" /* ページタイトル＋文字列なければjsonのサイト名のみ表示 */
+      const pageDesc   = "page desc ohhhhhhhh" /* ページ概要＋文字列なければjsonのdescのみ表示 */
+      const pageType   = "template" /* css, js用 */
+      const pageRole   = "siteRoot" /* css, js用 */
+    </pre>
+    <p><a href="/about/">About</a></p>
+		<!-- <svg
 			class="astro-a"
 			width="495"
 			height="623"
@@ -59,12 +77,12 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
+		</ul> -->
 	</main>
-</Layout>
+</BaseLayout>
 
 <style>
-	main {
+	/* main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -119,5 +137,5 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
-	}
+	} */
 </style>

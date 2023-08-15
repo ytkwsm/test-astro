@@ -1,0 +1,55 @@
+---
+import config from '../../settings/config.json';
+
+const title = config.site.name;
+---
+<button type="button" id="btnChangeColor">カラーモードを変更する（scriptテスト）</button>
+<style>
+  #btnChangeColor {
+    &:hover {
+      background: #666;
+      color: #fff;
+    }
+  }
+  html[data-site-color="light"] {
+    --colorTxt: #000;
+    --colorBg: #fff;
+    #btnChangeColor {
+      background: #eee;
+      color: #333;
+      &:hover {
+        background: #666;
+        color: #fff;
+      }
+    }
+  }
+  html[data-site-color="dark"] {
+    --colorTxt: #fff;
+    --colorBg: #202124;
+    #btnChangeColor {
+      background: #666;
+      color: #fff;
+      &:hover {
+      background: #eee;
+        color: #333;
+      }
+    }
+  }
+</style>
+<script>
+  const btn = document.getElementById("btnChangeColor");
+  const systemColor = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const siteColor = systemColor ? "dark" : "light"
+  const htmlBody = document.querySelector('html');
+  htmlBody.dataset.siteColor = siteColor;
+
+  btn?.addEventListener("click", changeColorMode, false);
+
+  function changeColorMode() {
+    if(htmlBody.dataset.siteColor === "dark"){
+      htmlBody.dataset.siteColor = "light";
+    } else {
+      htmlBody.dataset.siteColor = "dark";
+    }
+  }
+</script>

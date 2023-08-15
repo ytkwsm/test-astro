@@ -1,0 +1,17 @@
+---
+import config from '../../settings/config.json';
+
+interface Props {
+	pageTitle: string;
+	pageDesc: string;
+}
+
+const { pageTitle, pageDesc }  = Astro.props;
+
+---
+<header class="PageHeader">
+  <hgroup>
+    <h1>{pageTitle}</h1>
+    <p>{pageDesc}</p>
+  </hgroup>
+</header>
